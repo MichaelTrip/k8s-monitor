@@ -1,0 +1,81 @@
+{
+  "webPort": 8080,
+  "persistence": {
+    "enabled": true,
+    "filePath": "changes.json",
+    "autoSave": true,
+    "saveInterval": 30
+  },
+  "resources": [
+    {
+      "name": "pods",
+      "enabled": true,
+      "description": "Kubernetes Pods"
+    },
+    {
+      "name": "deployments",
+      "enabled": true,
+      "description": "Kubernetes Deployments"
+    },
+    {
+      "name": "services",
+      "enabled": true,
+      "description": "Kubernetes Services"
+    },
+    {
+      "name": "configmaps",
+      "enabled": true,
+      "description": "Kubernetes ConfigMaps"
+    },
+    {
+      "name": "secrets",
+      "enabled": true,
+      "description": "Kubernetes Secrets"
+    },
+    {
+      "name": "replicasets",
+      "enabled": false,
+      "description": "Kubernetes ReplicaSets"
+    },
+    {
+      "name": "daemonsets",
+      "enabled": false,
+      "description": "Kubernetes DaemonSets"
+    },
+    {
+      "name": "statefulsets",
+      "enabled": false,
+      "description": "Kubernetes StatefulSets"
+    },
+    {
+      "name": "jobs",
+      "enabled": false,
+      "description": "Kubernetes Jobs"
+    },
+    {
+      "name": "cronjobs",
+      "enabled": false,
+      "description": "Kubernetes CronJobs"
+    },
+    {
+      "name": "persistentvolumes",
+      "enabled": false,
+      "description": "Kubernetes PersistentVolumes"
+    },
+    {
+      "name": "persistentvolumeclaims",
+      "enabled": false,
+      "description": "Kubernetes PersistentVolumeClaims"
+    },
+    {
+      "name": "ingresses",
+      "enabled": false,
+      "description": "Kubernetes Ingresses"
+    },
+    {
+      "name": "networkpolicies",
+      "enabled": false,
+      "description": "Kubernetes NetworkPolicies"
+    }
+  ]
+}

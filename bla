@@ -1,0 +1,1 @@
+sudo docker run --rm --network host   -v /home/trip509/.kube:/home/k8s-monitor/.kube:ro   -v /home/trip509/dev/k8s-monitor/k8s-monitor/data:/app/data   -e KUBECONFIG=/home/k8s-monitor/.kube/config   --user 1000:1000   k8s-monitor:latest

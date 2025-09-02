@@ -1,0 +1,2885 @@
+{
+  "savedAt": "2025-09-02T13:47:44.76923777+02:00",
+  "changes": [
+    {
+      "id": "5e864e12bff8a1ca",
+      "timestamp": "2025-09-02T13:46:58.102474539+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "argocd",
+      "name": "argocd-cm",
+      "details": "Data keys: 14",
+      "isRead": true
+    },
+    {
+      "id": "d7e2f781d6a1a017",
+      "timestamp": "2025-09-02T13:46:58.102556485+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "argocd",
+      "name": "argocd-cmd-params-cm",
+      "details": "Data keys: 0",
+      "isRead": true
+    },
+    {
+      "id": "5f75a43f4ddb2d35",
+      "timestamp": "2025-09-02T13:46:58.102770486+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "argocd",
+      "name": "argocd-gpg-keys-cm",
+      "details": "Data keys: 0",
+      "isRead": true
+    },
+    {
+      "id": "59b0fa7527e1da3a",
+      "timestamp": "2025-09-02T13:46:58.16242547+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "argocd",
+      "name": "argocd-notifications-cm",
+      "details": "Data keys: 0",
+      "isRead": true
+    },
+    {
+      "id": "41e70a6e2d832684",
+      "timestamp": "2025-09-02T13:46:58.162431713+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "argocd",
+      "name": "argocd-initial-admin-secret",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "d7f36baf82a73663",
+      "timestamp": "2025-09-02T13:46:58.162507196+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "argocd",
+      "name": "argocd-rbac-cm",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "8ff4b8cb60b99ee5",
+      "timestamp": "2025-09-02T13:46:58.162591316+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "argocd",
+      "name": "argocd-notifications-secret",
+      "details": "Type: Opaque, Data keys: 0",
+      "isRead": true
+    },
+    {
+      "id": "09f91cd899933824",
+      "timestamp": "2025-09-02T13:46:58.162735311+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "argocd",
+      "name": "argocd-redis",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "0a9aabd72e826ad1",
+      "timestamp": "2025-09-02T13:46:58.165136177+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "argocd",
+      "name": "argocd-ssh-known-hosts-cm",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "98e56d1a95bfe67a",
+      "timestamp": "2025-09-02T13:46:58.165480242+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "argocd",
+      "name": "argocd-secret",
+      "details": "Type: Opaque, Data keys: 8",
+      "isRead": true
+    },
+    {
+      "id": "eb80fd60f27a5fda",
+      "timestamp": "2025-09-02T13:46:58.19305444+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "argocd",
+      "name": "argocd-tls-certs-cm",
+      "details": "Data keys: 0",
+      "isRead": true
+    },
+    {
+      "id": "6b7965da57821ec5",
+      "timestamp": "2025-09-02T13:46:58.193065643+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "argocd",
+      "name": "argocd.k8s-lan.alcatrash.net",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "8f298dc520d49a19",
+      "timestamp": "2025-09-02T13:46:58.193093218+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "argocd",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "35c43599edfb3481",
+      "timestamp": "2025-09-02T13:46:58.194695114+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "authentik",
+      "name": "authentik-redis-configuration",
+      "details": "Data keys: 4",
+      "isRead": true
+    },
+    {
+      "id": "ac88606ca2a3197b",
+      "timestamp": "2025-09-02T13:46:58.223933536+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "authentik",
+      "name": "authentik-redis-health",
+      "details": "Data keys: 6",
+      "isRead": true
+    },
+    {
+      "id": "7994acf5f18f7cc2",
+      "timestamp": "2025-09-02T13:46:58.224463162+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "argocd",
+      "name": "argocd.k8s.alcatrash.net",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "270e1788379ba486",
+      "timestamp": "2025-09-02T13:46:58.255203655+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "argocd",
+      "name": "repo-creds",
+      "details": "Type: Opaque, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "829ca22b4c9522bd",
+      "timestamp": "2025-09-02T13:46:58.255274734+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "authentik",
+      "name": "authentik",
+      "details": "Type: Opaque, Data keys: 20",
+      "isRead": true
+    },
+    {
+      "id": "d2bd4b4fc36095d0",
+      "timestamp": "2025-09-02T13:46:58.258304543+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "authentik",
+      "name": "authentik-outpost-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "fbaef3f54d537039",
+      "timestamp": "2025-09-02T13:46:58.2831207+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "authentik",
+      "name": "authentik-redis-scripts",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "498a1ef3e30eed6e",
+      "timestamp": "2025-09-02T13:46:58.285577875+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "authentik",
+      "name": "authentik-postgres-app",
+      "details": "Type: kubernetes.io/basic-auth, Data keys: 9",
+      "isRead": true
+    },
+    {
+      "id": "d2f291b15fd0887a",
+      "timestamp": "2025-09-02T13:46:58.285607193+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "authentik",
+      "name": "authentik-postgres-ca",
+      "details": "Type: Opaque, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "408ec92858045aae",
+      "timestamp": "2025-09-02T13:46:58.286142711+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "authentik",
+      "name": "cnpg-default-monitoring",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "95df910e27d3da26",
+      "timestamp": "2025-09-02T13:46:58.298088275+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "authentik",
+      "name": "authentik-postgres-replication",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "4302f4347d5d508a",
+      "timestamp": "2025-09-02T13:46:58.298148856+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "authentik",
+      "name": "authentik-postgres-secret",
+      "details": "Type: kubernetes.io/basic-auth, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "3472fae787403678",
+      "timestamp": "2025-09-02T13:46:58.315901499+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "authentik",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "3c784a244c27274d",
+      "timestamp": "2025-09-02T13:46:58.315928022+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "bluegreen-demo",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "ac55c8e6919766a6",
+      "timestamp": "2025-09-02T13:46:58.347648739+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "authentik",
+      "name": "authentik-postgres-server",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "da9c39433b0f91cb",
+      "timestamp": "2025-09-02T13:46:58.350731446+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "authentik",
+      "name": "authentik-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "1bc3e6349d70e26b",
+      "timestamp": "2025-09-02T13:46:58.351249553+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "cdi",
+      "name": "cdi-apiserver-signer-bundle",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "30e3435ad49f131e",
+      "timestamp": "2025-09-02T13:46:58.3513038+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "cdi",
+      "name": "cdi-config",
+      "details": "Data keys: 0",
+      "isRead": true
+    },
+    {
+      "id": "e2e5a477c07f6b2b",
+      "timestamp": "2025-09-02T13:46:58.378977977+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "authentik",
+      "name": "s3-creds",
+      "details": "Type: Opaque, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "31f303949ee00ffe",
+      "timestamp": "2025-09-02T13:46:58.382813658+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cdi",
+      "name": "cdi-api-signing-key",
+      "details": "Type: Opaque, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "94e9a721505fdda9",
+      "timestamp": "2025-09-02T13:46:58.382977454+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "cdi",
+      "name": "cdi-uploadproxy-signer-bundle",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "046e9572bbc8dd9a",
+      "timestamp": "2025-09-02T13:46:58.382985231+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cdi",
+      "name": "cdi-apiserver-server-cert",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "101eff17d5412175",
+      "timestamp": "2025-09-02T13:46:58.383081331+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "cdi",
+      "name": "cdi-uploadserver-client-signer-bundle",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "ed2faab1c6b6d65d",
+      "timestamp": "2025-09-02T13:46:58.394566325+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "cdi",
+      "name": "cdi-uploadserver-signer-bundle",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "fc1d91f3e25070e4",
+      "timestamp": "2025-09-02T13:46:58.394648524+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "cdi",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "309ccbc41e50137e",
+      "timestamp": "2025-09-02T13:46:58.408720038+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cdi",
+      "name": "cdi-apiserver-signer",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "cf6d2da59ee9134a",
+      "timestamp": "2025-09-02T13:46:58.409843405+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "cert-manager",
+      "name": "cert-manager",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "8a145d4c7ac04f4f",
+      "timestamp": "2025-09-02T13:46:58.409869192+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "cert-manager",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "4524ba221e99ee62",
+      "timestamp": "2025-09-02T13:46:58.410059391+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "cilium-secrets",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "af9c8e1ad3fda211",
+      "timestamp": "2025-09-02T13:46:58.439180786+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cdi",
+      "name": "cdi-uploadproxy-server-cert",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "a792081014b5b9f3",
+      "timestamp": "2025-09-02T13:46:58.439268751+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "cloudflare-tunnel-ingress-controller",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "93d502f88208051b",
+      "timestamp": "2025-09-02T13:46:58.439294951+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "cnpg-system",
+      "name": "cnpg-controller-manager-config",
+      "details": "Data keys: 0",
+      "isRead": true
+    },
+    {
+      "id": "1216a41c6a0fac0b",
+      "timestamp": "2025-09-02T13:46:58.471139892+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "cnpg-system",
+      "name": "cnpg-default-monitoring",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "c1789b561beb6bf8",
+      "timestamp": "2025-09-02T13:46:58.503200028+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cdi",
+      "name": "cdi-uploadproxy-signer",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "8cf86e2fa8e9700f",
+      "timestamp": "2025-09-02T13:46:58.503315024+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cdi",
+      "name": "cdi-uploadserver-client-cert",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "c72ff177b77d4aa1",
+      "timestamp": "2025-09-02T13:46:58.517164422+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cdi",
+      "name": "cdi-uploadserver-client-signer",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "0a0e012746d0d6f7",
+      "timestamp": "2025-09-02T13:46:58.556216483+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cdi",
+      "name": "cdi-uploadserver-signer",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "26d724a5f3f4c100",
+      "timestamp": "2025-09-02T13:46:58.573036666+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "cnpg-system",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "ab7398a33878a32c",
+      "timestamp": "2025-09-02T13:46:58.606340985+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cert-manager",
+      "name": "cert-manager-webhook-ca",
+      "details": "Type: Opaque, Data keys: 3",
+      "isRead": true
+    },
+    {
+      "id": "26a6acfc96ff9fe0",
+      "timestamp": "2025-09-02T13:46:58.607243313+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cert-manager",
+      "name": "cert-manager-webhook-pdns-ca",
+      "details": "Type: kubernetes.io/tls, Data keys: 3",
+      "isRead": true
+    },
+    {
+      "id": "d78856d2abc787ef",
+      "timestamp": "2025-09-02T13:46:58.607947067+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "dashy",
+      "name": "dashy-config",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "47ccfa8383cdce86",
+      "timestamp": "2025-09-02T13:46:58.638142848+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "dashy",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "eb792bb1e0c11a4c",
+      "timestamp": "2025-09-02T13:46:58.638890685+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cert-manager",
+      "name": "cert-manager-webhook-pdns-webhook-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 3",
+      "isRead": true
+    },
+    {
+      "id": "e3d991613e735e79",
+      "timestamp": "2025-09-02T13:46:58.654748127+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "default",
+      "name": "argocd-ssh-known-hosts-cm",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "0ddaa8590d026b69",
+      "timestamp": "2025-09-02T13:46:58.668306013+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cert-manager",
+      "name": "letsencrypt-prod-issuer-account-key",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "534da435ba5b2d06",
+      "timestamp": "2025-09-02T13:46:58.670055124+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "default",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "60779b0757dd382a",
+      "timestamp": "2025-09-02T13:46:58.670162885+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "desktop",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "c2912e881f1c1419",
+      "timestamp": "2025-09-02T13:46:58.697184521+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cert-manager",
+      "name": "letsencrypt-prod-issuer-account-key2",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "411c3f5b7fbe138c",
+      "timestamp": "2025-09-02T13:46:58.697416048+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cert-manager",
+      "name": "letsencrypt-staging-issuer-account-key",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "179d6c38b1251d10",
+      "timestamp": "2025-09-02T13:46:58.697462477+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cert-manager",
+      "name": "pdns-api-key",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "fa5054ddadcfab08",
+      "timestamp": "2025-09-02T13:46:58.700319174+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "filedump",
+      "name": "filedump-nginx-config",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "17f53cdb1a10a526",
+      "timestamp": "2025-09-02T13:46:58.700346113+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "filedump",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "3edec85c50fd7460",
+      "timestamp": "2025-09-02T13:46:58.700673885+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cilium-secrets",
+      "name": "kube-system-k8s-gateway-alcatrash-net-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "4a34e48bf8242703",
+      "timestamp": "2025-09-02T13:46:58.742253686+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "guacamole",
+      "name": "cnpg-default-monitoring",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "5154f3016dfe3666",
+      "timestamp": "2025-09-02T13:46:58.760304502+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "guacamole",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "ee75c3950e751e5a",
+      "timestamp": "2025-09-02T13:46:58.761245534+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "homepage",
+      "name": "homepage",
+      "details": "Data keys: 6",
+      "isRead": true
+    },
+    {
+      "id": "719ca7f73ff91f0f",
+      "timestamp": "2025-09-02T13:46:58.785574138+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cloudflare-tunnel-ingress-controller",
+      "name": "cloudflare-api",
+      "details": "Type: Opaque, Data keys: 3",
+      "isRead": true
+    },
+    {
+      "id": "f79fbf05221c0629",
+      "timestamp": "2025-09-02T13:46:58.786977731+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cloudflare-tunnel-ingress-controller",
+      "name": "sh.helm.release.v1.cloudflare-tunnel-ingress-controller.v1",
+      "details": "Type: helm.sh/release.v1, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "dbe77ca306e10a0f",
+      "timestamp": "2025-09-02T13:46:58.789706683+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cnpg-system",
+      "name": "cnpg-ca-secret",
+      "details": "Type: Opaque, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "a5df80f843084052",
+      "timestamp": "2025-09-02T13:46:58.789802906+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "cnpg-system",
+      "name": "cnpg-webhook-cert",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "0c5094c63dd5b119",
+      "timestamp": "2025-09-02T13:46:58.815355872+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "homepage",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "e6a86823691f3045",
+      "timestamp": "2025-09-02T13:46:58.815366502+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "ingress-dashboard",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "59aa887bf21a912c",
+      "timestamp": "2025-09-02T13:46:58.815472176+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "ingress-nginx",
+      "name": "ingress-nginx-external-controller",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "62a07932e20d843e",
+      "timestamp": "2025-09-02T13:46:58.815940488+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "dashy",
+      "name": "auth",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "df5ace544d6237b5",
+      "timestamp": "2025-09-02T13:46:58.816856206+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "dashy",
+      "name": "dashy-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "03be399585c2a477",
+      "timestamp": "2025-09-02T13:46:58.818194389+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "ingress-nginx",
+      "name": "ingress-nginx-internal-controller",
+      "details": "Data keys: 0",
+      "isRead": true
+    },
+    {
+      "id": "0688777a1265c3c8",
+      "timestamp": "2025-09-02T13:46:58.818218977+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "ingress-nginx",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "bcaeae88f3cfaf65",
+      "timestamp": "2025-09-02T13:46:58.818275517+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kube-node-lease",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "48e2bea70d25aa41",
+      "timestamp": "2025-09-02T13:46:58.847709579+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "default",
+      "name": "domrechts-bot-secrets",
+      "details": "Type: Opaque, Data keys: 4",
+      "isRead": true
+    },
+    {
+      "id": "21745c6b9087ee36",
+      "timestamp": "2025-09-02T13:46:58.848525838+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "default",
+      "name": "hello-from-pod.k8s-lan.alcatrash.net",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "e240c766cafa34da",
+      "timestamp": "2025-09-02T13:46:58.865342669+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "default",
+      "name": "radarr-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "21a7fec0fe160fdc",
+      "timestamp": "2025-09-02T13:46:58.882797433+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kube-public",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "787dd5cfa49da63b",
+      "timestamp": "2025-09-02T13:46:58.88382551+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kube-system",
+      "name": "cilium-config",
+      "details": "Data keys: 145",
+      "isRead": true
+    },
+    {
+      "id": "1fbd62735ce972a9",
+      "timestamp": "2025-09-02T13:46:58.884176517+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "default",
+      "name": "radarrinternal-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "e688762c706b7aa7",
+      "timestamp": "2025-09-02T13:46:58.914130503+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kube-system",
+      "name": "cilium-envoy-config",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "91de953974c9be93",
+      "timestamp": "2025-09-02T13:46:58.934016372+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "desktop",
+      "name": "rdesktop",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "daaf85ce042a413b",
+      "timestamp": "2025-09-02T13:46:58.93412137+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "filedump",
+      "name": "filedump-auth",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "0824bb1e6e3280d8",
+      "timestamp": "2025-09-02T13:46:58.950560858+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kube-system",
+      "name": "coredns",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "30f761e9d7bae879",
+      "timestamp": "2025-09-02T13:46:58.950620417+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kube-system",
+      "name": "extension-apiserver-authentication",
+      "details": "Data keys: 6",
+      "isRead": true
+    },
+    {
+      "id": "d91e24e3b0eba0ad",
+      "timestamp": "2025-09-02T13:46:58.95062144+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "filedump",
+      "name": "filedump-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "0cbfaa9b7865dd7a",
+      "timestamp": "2025-09-02T13:46:58.950663762+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "guacamole",
+      "name": "guacamole",
+      "details": "Type: Opaque, Data keys: 14",
+      "isRead": true
+    },
+    {
+      "id": "22a922cbfff6b3ee",
+      "timestamp": "2025-09-02T13:46:58.950953457+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kube-system",
+      "name": "hubble-relay-config",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "e9ec07156c42477c",
+      "timestamp": "2025-09-02T13:46:58.950962818+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kube-system",
+      "name": "hubble-ui-nginx",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "9a8a1332d079636b",
+      "timestamp": "2025-09-02T13:46:58.951160323+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kube-system",
+      "name": "kube-apiserver-legacy-service-account-token-tracking",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "37f6fd251503a911",
+      "timestamp": "2025-09-02T13:46:58.95118101+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kube-system",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "e50cd3dcdabc68ce",
+      "timestamp": "2025-09-02T13:46:58.985046192+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kube-system",
+      "name": "kubeconfig-in-cluster",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "2a276b69ade7cc50",
+      "timestamp": "2025-09-02T13:46:58.985108986+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kube-system",
+      "name": "metallb-excludel2",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "7954285fd2890dbc",
+      "timestamp": "2025-09-02T13:46:58.985504609+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "guacamole",
+      "name": "guacamole-160",
+      "details": "Type: Opaque, Data keys: 8",
+      "isRead": true
+    },
+    {
+      "id": "d0166077ffa76627",
+      "timestamp": "2025-09-02T13:46:58.985560777+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "guacamole",
+      "name": "guacamole-postgres-app",
+      "details": "Type: kubernetes.io/basic-auth, Data keys: 9",
+      "isRead": true
+    },
+    {
+      "id": "03afe2e15204fcf7",
+      "timestamp": "2025-09-02T13:46:59.000023891+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "guacamole",
+      "name": "guacamole-postgres-ca",
+      "details": "Type: Opaque, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "fb29a714036715d5",
+      "timestamp": "2025-09-02T13:46:59.000054409+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kube-system",
+      "name": "metallb-frr-startup",
+      "details": "Data keys: 3",
+      "isRead": true
+    },
+    {
+      "id": "907b603a1f71537d",
+      "timestamp": "2025-09-02T13:46:59.00006016+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "guacamole",
+      "name": "guacamole-postgres-replication",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "e943522d452dc1ac",
+      "timestamp": "2025-09-02T13:46:59.01733632+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "guacamole",
+      "name": "guacamole-postgres-secret",
+      "details": "Type: kubernetes.io/basic-auth, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "1197456a06d8c36d",
+      "timestamp": "2025-09-02T13:46:59.017383294+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "guacamole",
+      "name": "guacamole-postgres-server",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "b9be1b5b3c5e58d0",
+      "timestamp": "2025-09-02T13:46:59.017485362+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "guacamole",
+      "name": "guacamole-postgres-superuser",
+      "details": "Type: kubernetes.io/basic-auth, Data keys: 9",
+      "isRead": true
+    },
+    {
+      "id": "2d61a3ce7b959fdb",
+      "timestamp": "2025-09-02T13:46:59.017492337+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kube-system",
+      "name": "talos-cloud-controller-manager",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "5d88028e122b9471",
+      "timestamp": "2025-09-02T13:46:59.01752025+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kubelet-serving-cert-approver",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "9f070817a144e8f4",
+      "timestamp": "2025-09-02T13:46:59.018100852+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kubevirt-manager",
+      "name": "auth-config",
+      "details": "Data keys: 0",
+      "isRead": true
+    },
+    {
+      "id": "c7e47faddad1ffe0",
+      "timestamp": "2025-09-02T13:46:59.018125643+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kubevirt-manager",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "b3b686bfb25d222f",
+      "timestamp": "2025-09-02T13:46:59.018258901+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kubevirt-manager",
+      "name": "prometheus-config",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "fa772aa68b27b729",
+      "timestamp": "2025-09-02T13:46:59.044587156+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "guacamole",
+      "name": "guacamole-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "8a2b2ceab09720b7",
+      "timestamp": "2025-09-02T13:46:59.045687675+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kubevirt-portal",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "1c798ae133306198",
+      "timestamp": "2025-09-02T13:46:59.045863881+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kubevirt-portal",
+      "name": "kubevirt-portal-config",
+      "details": "Data keys: 7",
+      "isRead": true
+    },
+    {
+      "id": "e5599663ae12881d",
+      "timestamp": "2025-09-02T13:46:59.046157083+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kubevirt",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "039167f1a0124354",
+      "timestamp": "2025-09-02T13:46:59.075328661+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "guacamole",
+      "name": "guacamole160-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "ab632ff1413a0a75",
+      "timestamp": "2025-09-02T13:46:59.076536024+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "guacamole",
+      "name": "s3-creds",
+      "details": "Type: Opaque, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "7789d1accc053ec6",
+      "timestamp": "2025-09-02T13:46:59.089595897+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "homepage",
+      "name": "homepage-sa-token",
+      "details": "Type: kubernetes.io/service-account-token, Data keys: 3",
+      "isRead": true
+    },
+    {
+      "id": "4d5cf987a21aca0a",
+      "timestamp": "2025-09-02T13:46:59.105076326+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "homepage",
+      "name": "homepage-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "10ccdaaa195ab72d",
+      "timestamp": "2025-09-02T13:46:59.10785214+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "ingress-dashboard",
+      "name": "ingress-dashboard-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "633ab7a15d58decb",
+      "timestamp": "2025-09-02T13:46:59.119930672+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "ingress-nginx",
+      "name": "ingress-nginx-external-admission",
+      "details": "Type: Opaque, Data keys: 3",
+      "isRead": true
+    },
+    {
+      "id": "accaf1c3b50aca48",
+      "timestamp": "2025-09-02T13:46:59.137030842+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "ingress-nginx",
+      "name": "ingress-nginx-internal-admission",
+      "details": "Type: Opaque, Data keys: 3",
+      "isRead": true
+    },
+    {
+      "id": "1c57dfe426b1f6bd",
+      "timestamp": "2025-09-02T13:46:59.137102051+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "bootstrap-token-hs4q6x",
+      "details": "Type: bootstrap.kubernetes.io/token, Data keys: 4",
+      "isRead": true
+    },
+    {
+      "id": "241bcbe78457a178",
+      "timestamp": "2025-09-02T13:46:59.137362647+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "cilium-ca",
+      "details": "Type: Opaque, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "7edd2b4bfe75feab",
+      "timestamp": "2025-09-02T13:46:59.171695157+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "hubble-relay-client-certs",
+      "details": "Type: kubernetes.io/tls, Data keys: 3",
+      "isRead": true
+    },
+    {
+      "id": "923b37e791d3dec0",
+      "timestamp": "2025-09-02T13:46:59.183664401+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "hubble-server-certs",
+      "details": "Type: kubernetes.io/tls, Data keys: 3",
+      "isRead": true
+    },
+    {
+      "id": "85e7338e77fe8067",
+      "timestamp": "2025-09-02T13:46:59.20504493+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "k8s-gateway-alcatrash-net-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "dad0da429ea7a28d",
+      "timestamp": "2025-09-02T13:46:59.2357007+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "metallb-memberlist",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "44083b242e630dd1",
+      "timestamp": "2025-09-02T13:46:59.246415098+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "metallb-webhook-cert",
+      "details": "Type: Opaque, Data keys: 4",
+      "isRead": true
+    },
+    {
+      "id": "c16d0b00238eaeee",
+      "timestamp": "2025-09-02T13:46:59.516814849+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kubevirt",
+      "name": "kubevirt-ca",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "a7f198c60917db8f",
+      "timestamp": "2025-09-02T13:46:59.516897389+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kubevirt",
+      "name": "kubevirt-export-ca",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "0504ba579dd7749b",
+      "timestamp": "2025-09-02T13:46:59.826916171+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "pdns-api-key",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "6ea698c0e6eb0007",
+      "timestamp": "2025-09-02T13:46:59.82695875+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "s3-bucket-secret",
+      "details": "Type: Opaque, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "2223c97ba2fd74fa",
+      "timestamp": "2025-09-02T13:47:00.23412507+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kubevirt",
+      "name": "kubevirt-install-strategy-6fgdc",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "df436090b760ae7c",
+      "timestamp": "2025-09-02T13:47:00.631114985+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "sh.helm.release.v1.cilium.v11",
+      "details": "Type: helm.sh/release.v1, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "75e84ea41167f6da",
+      "timestamp": "2025-09-02T13:47:01.470342535+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kubevirt",
+      "name": "kubevirt-install-strategy-9xqnh",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "b77b2b7bc8a30fdf",
+      "timestamp": "2025-09-02T13:47:01.948868665+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "sh.helm.release.v1.cilium.v12",
+      "details": "Type: helm.sh/release.v1, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "5d4d2d892400966a",
+      "timestamp": "2025-09-02T13:47:02.827747835+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kubevirt",
+      "name": "kubevirt-install-strategy-g6vz8",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "9301d829ac862e18",
+      "timestamp": "2025-09-02T13:47:03.135710222+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "sh.helm.release.v1.cilium.v13",
+      "details": "Type: helm.sh/release.v1, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "04fafc9a984ae2ae",
+      "timestamp": "2025-09-02T13:47:04.743087845+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "kubevirt",
+      "name": "kubevirt-install-strategy-lg6hq",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "d93672d80393e75f",
+      "timestamp": "2025-09-02T13:47:04.882985868+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "local-path-storage",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "7d0eab501ff123c0",
+      "timestamp": "2025-09-02T13:47:04.883054377+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "local-path-storage",
+      "name": "local-path-config",
+      "details": "Data keys: 4",
+      "isRead": true
+    },
+    {
+      "id": "d234f177f5ec7ad2",
+      "timestamp": "2025-09-02T13:47:05.14327045+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "longhorn-system",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "384b98b48b679652",
+      "timestamp": "2025-09-02T13:47:05.143303381+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "longhorn-system",
+      "name": "longhorn-default-resource",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "c8ca922fce45ddc6",
+      "timestamp": "2025-09-02T13:47:05.360176465+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "longhorn-system",
+      "name": "longhorn-default-setting",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "fe287f78811367ae",
+      "timestamp": "2025-09-02T13:47:05.360228751+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "longhorn-system",
+      "name": "longhorn-storageclass",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "41078a7e2fb38822",
+      "timestamp": "2025-09-02T13:47:05.442485158+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "sh.helm.release.v1.cilium.v14",
+      "details": "Type: helm.sh/release.v1, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "a2f56a55811d35c7",
+      "timestamp": "2025-09-02T13:47:05.498999207+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "metube",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "e97c0350707b6f74",
+      "timestamp": "2025-09-02T13:47:05.499052111+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "8d5fe0c9cefd3dfb",
+      "timestamp": "2025-09-02T13:47:05.49925111+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-grafana",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "d41badd3c5c6b532",
+      "timestamp": "2025-09-02T13:47:05.499298435+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-grafana-config-dashboards",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "c007aa059018a533",
+      "timestamp": "2025-09-02T13:47:05.500120462+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-alertmanager-overview",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "8c659d485d77f9ca",
+      "timestamp": "2025-09-02T13:47:05.566695376+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-apiserver",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "ec54ce683d4924b8",
+      "timestamp": "2025-09-02T13:47:05.638684446+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-cluster-total",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "ee8c96c0f46eb62c",
+      "timestamp": "2025-09-02T13:47:05.6392508+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-controller-manager",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "8f255f64aecfccc4",
+      "timestamp": "2025-09-02T13:47:05.708023172+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-etcd",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "91dab30350733bdd",
+      "timestamp": "2025-09-02T13:47:05.708161491+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-grafana-datasource",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "c177a2cdb2b9162f",
+      "timestamp": "2025-09-02T13:47:05.70929608+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-grafana-overview",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "1d7ee56f26b17106",
+      "timestamp": "2025-09-02T13:47:05.85633425+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-k8s-coredns",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "8263ab915547b9e8",
+      "timestamp": "2025-09-02T13:47:05.913732121+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-k8s-resources-cluster",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "31474dc353c4960e",
+      "timestamp": "2025-09-02T13:47:05.953368666+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-k8s-resources-multicluster",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "61ab35609321a34a",
+      "timestamp": "2025-09-02T13:47:06.012116793+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-k8s-resources-namespace",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "c5a8eba10cee58c2",
+      "timestamp": "2025-09-02T13:47:06.033802758+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-k8s-resources-node",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "f0a88820955eab85",
+      "timestamp": "2025-09-02T13:47:06.068342891+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-k8s-resources-pod",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "67b69778ea86f84d",
+      "timestamp": "2025-09-02T13:47:06.145739214+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-k8s-resources-workload",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "b86c2f7498867fd9",
+      "timestamp": "2025-09-02T13:47:06.258662938+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-k8s-resources-workloads-namespace",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "dee7fbb2b8841b27",
+      "timestamp": "2025-09-02T13:47:06.552781919+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-kubelet",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "1b554fd9718890cb",
+      "timestamp": "2025-09-02T13:47:06.683450899+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-namespace-by-pod",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "a3a4ddf3344209ec",
+      "timestamp": "2025-09-02T13:47:06.842331886+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-namespace-by-workload",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "4abfc29f043e7b9b",
+      "timestamp": "2025-09-02T13:47:06.928070112+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "sh.helm.release.v1.cilium.v15",
+      "details": "Type: helm.sh/release.v1, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "f3f62c99348d94b8",
+      "timestamp": "2025-09-02T13:47:06.937366105+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-node-cluster-rsrc-use",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "c3fe43b30fba3717",
+      "timestamp": "2025-09-02T13:47:06.937460307+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-node-rsrc-use",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "10d2cca304e2d87e",
+      "timestamp": "2025-09-02T13:47:06.967110003+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-nodes",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "6d4659963213aa35",
+      "timestamp": "2025-09-02T13:47:06.972360341+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-nodes-aix",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "496c99eaa59f1e9e",
+      "timestamp": "2025-09-02T13:47:06.99779703+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-nodes-darwin",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "e999a1309e25c9ee",
+      "timestamp": "2025-09-02T13:47:07.00021793+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-persistentvolumesusage",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "f95e85be0c8f291d",
+      "timestamp": "2025-09-02T13:47:07.027386759+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-pod-total",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "925ddd1e4580b3f7",
+      "timestamp": "2025-09-02T13:47:07.060462277+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-prometheus",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "dad5d7542cb69e36",
+      "timestamp": "2025-09-02T13:47:07.063230874+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-proxy",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "b960c45a79977c41",
+      "timestamp": "2025-09-02T13:47:07.091556151+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-scheduler",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "ef7218f45d225c16",
+      "timestamp": "2025-09-02T13:47:07.091766625+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-workload-total",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "9d97b9cf632e2a0d",
+      "timestamp": "2025-09-02T13:47:07.541857114+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "monitoring",
+      "name": "prometheus-prometheus-kube-stack-kube-prometheus-rulefiles-0",
+      "details": "Data keys: 36",
+      "isRead": true
+    },
+    {
+      "id": "5dd6f169653ce8c0",
+      "timestamp": "2025-09-02T13:47:07.583056779+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "nginx-test",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "954e631a0956b903",
+      "timestamp": "2025-09-02T13:47:07.583098672+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "pihole",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "27e018e837f0b28b",
+      "timestamp": "2025-09-02T13:47:07.697540539+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "portainer",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "3e4bdd1fdf1f7f58",
+      "timestamp": "2025-09-02T13:47:07.697604254+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "renovate",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "ac1d9b6b4530003c",
+      "timestamp": "2025-09-02T13:47:07.697811387+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "renovate",
+      "name": "renovate-config",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "057f231a9984a448",
+      "timestamp": "2025-09-02T13:47:07.776073107+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "reverse-proxy",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "2a333dc550ddb5c1",
+      "timestamp": "2025-09-02T13:47:07.776104526+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "virtualmachines",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "27d3adc231a896ce",
+      "timestamp": "2025-09-02T13:47:07.776165588+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "website",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "42e26d484ce292e9",
+      "timestamp": "2025-09-02T13:47:07.795176635+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "whoogle",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "bc65691063c59962",
+      "timestamp": "2025-09-02T13:47:07.795261449+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "wikipedia",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "878ab62a39e2a8c1",
+      "timestamp": "2025-09-02T13:47:07.795558042+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "wireguard",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "ce9f4315d74975fa",
+      "timestamp": "2025-09-02T13:47:07.795588966+02:00",
+      "eventType": "ADDED",
+      "resourceType": "configmaps",
+      "namespace": "wp-michaeltrip",
+      "name": "kube-root-ca.crt",
+      "details": "Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "b856c2dcf05e7301",
+      "timestamp": "2025-09-02T13:47:07.806421417+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "sh.helm.release.v1.cilium.v16",
+      "details": "Type: helm.sh/release.v1, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "06841715ac33ee40",
+      "timestamp": "2025-09-02T13:47:08.31994824+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "sh.helm.release.v1.cilium.v17",
+      "details": "Type: helm.sh/release.v1, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "11add1cfec5c337b",
+      "timestamp": "2025-09-02T13:47:08.823990345+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "sh.helm.release.v1.cilium.v18",
+      "details": "Type: helm.sh/release.v1, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "c42f3b3568e3607b",
+      "timestamp": "2025-09-02T13:47:09.296576747+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "sh.helm.release.v1.cilium.v19",
+      "details": "Type: helm.sh/release.v1, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "de6c920089b6c0c6",
+      "timestamp": "2025-09-02T13:47:09.78446729+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "sh.helm.release.v1.cilium.v20",
+      "details": "Type: helm.sh/release.v1, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "1f16a62e369fa087",
+      "timestamp": "2025-09-02T13:47:09.784597616+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "talos-backup-secrets",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "3d243c775bdd9c0f",
+      "timestamp": "2025-09-02T13:47:09.785111964+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kube-system",
+      "name": "talos-cloud-controller-manager-talos-secrets",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "1e8b6e44f6b1f04b",
+      "timestamp": "2025-09-02T13:47:09.78513463+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kubevirt-manager",
+      "name": "auth-secret",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "a38070a61a13166e",
+      "timestamp": "2025-09-02T13:47:09.785476645+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kubevirt-manager",
+      "name": "kubevirt-manager-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "978fe717ba200af4",
+      "timestamp": "2025-09-02T13:47:09.799215938+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kubevirt-manager",
+      "name": "kubevirt-manager.k8s-lan.alcatrash.net",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "a68275f995dc1cc3",
+      "timestamp": "2025-09-02T13:47:09.799542364+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kubevirt-portal",
+      "name": "kubevirt-portal-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "3b34e6c754ccb266",
+      "timestamp": "2025-09-02T13:47:09.799944211+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kubevirt-portal",
+      "name": "kubevirt-portal-secrets",
+      "details": "Type: Opaque, Data keys: 4",
+      "isRead": true
+    },
+    {
+      "id": "cfdd3bb432aeebee",
+      "timestamp": "2025-09-02T13:47:09.800696102+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kubevirt",
+      "name": "kubevirt-ca",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "4d12eb53633d587e",
+      "timestamp": "2025-09-02T13:47:09.800790594+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kubevirt",
+      "name": "kubevirt-controller-certs",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "c34d49e628decc8a",
+      "timestamp": "2025-09-02T13:47:09.8014023+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kubevirt",
+      "name": "kubevirt-export-ca",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "0870be3c3c72eefa",
+      "timestamp": "2025-09-02T13:47:09.801457002+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kubevirt",
+      "name": "kubevirt-exportproxy-certs",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "8765cdc974c73603",
+      "timestamp": "2025-09-02T13:47:09.811643552+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kubevirt",
+      "name": "kubevirt-operator-certs",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "9eef6c254f518f48",
+      "timestamp": "2025-09-02T13:47:09.826712314+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kubevirt",
+      "name": "kubevirt-virt-api-certs",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "59fab485dcaeeaef",
+      "timestamp": "2025-09-02T13:47:09.826755997+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kubevirt",
+      "name": "kubevirt-virt-handler-certs",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "6fea096ce81064eb",
+      "timestamp": "2025-09-02T13:47:09.827044683+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "kubevirt",
+      "name": "kubevirt-virt-handler-server-certs",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "a28d53dde918ce5a",
+      "timestamp": "2025-09-02T13:47:09.827122207+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "longhorn-system",
+      "name": "longhorn-webhook-ca",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "9d1eb72d220801cc",
+      "timestamp": "2025-09-02T13:47:09.827343432+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "longhorn-system",
+      "name": "longhorn-webhook-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "df12792ff5d24d9c",
+      "timestamp": "2025-09-02T13:47:09.827361848+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "metube",
+      "name": "auth",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "0229a97197031fb6",
+      "timestamp": "2025-09-02T13:47:09.829164039+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "metube",
+      "name": "metube-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "d5e88d877d96cc9c",
+      "timestamp": "2025-09-02T13:47:09.829566544+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "monitoring",
+      "name": "alert-manager-secret-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "e37067b3c941a9b9",
+      "timestamp": "2025-09-02T13:47:09.829588619+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "monitoring",
+      "name": "alertmanager-prometheus-kube-stack-kube-alertmanager",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "41db5ac75cd7f4e5",
+      "timestamp": "2025-09-02T13:47:09.829677547+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "monitoring",
+      "name": "alertmanager-prometheus-kube-stack-kube-alertmanager-cluster-tls-config",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "493446362d961bee",
+      "timestamp": "2025-09-02T13:47:09.860074248+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "monitoring",
+      "name": "alertmanager-prometheus-kube-stack-kube-alertmanager-generated",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "b326ec73c72eb18e",
+      "timestamp": "2025-09-02T13:47:09.860156782+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "monitoring",
+      "name": "alertmanager-prometheus-kube-stack-kube-alertmanager-tls-assets-0",
+      "details": "Type: Opaque, Data keys: 0",
+      "isRead": true
+    },
+    {
+      "id": "a78f766345c24ab2",
+      "timestamp": "2025-09-02T13:47:09.860333679+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "monitoring",
+      "name": "alertmanager-prometheus-kube-stack-kube-alertmanager-web-config",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "63f159ece8b1c030",
+      "timestamp": "2025-09-02T13:47:09.861836942+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "monitoring",
+      "name": "grafana-secret-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "c664b8e554719bb7",
+      "timestamp": "2025-09-02T13:47:09.861973883+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-grafana",
+      "details": "Type: Opaque, Data keys: 3",
+      "isRead": true
+    },
+    {
+      "id": "41e3b30cdf0d6cc1",
+      "timestamp": "2025-09-02T13:47:09.862294081+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "monitoring",
+      "name": "prometheus-kube-stack-kube-admission",
+      "details": "Type: Opaque, Data keys: 3",
+      "isRead": true
+    },
+    {
+      "id": "f68c841e0e3f4491",
+      "timestamp": "2025-09-02T13:47:09.862465765+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "monitoring",
+      "name": "prometheus-prometheus-kube-stack-kube-prometheus",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "201fecc01005d04a",
+      "timestamp": "2025-09-02T13:47:09.862487478+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "monitoring",
+      "name": "prometheus-prometheus-kube-stack-kube-prometheus-thanos-prometheus-http-client-file",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "a413295cd8ef35a4",
+      "timestamp": "2025-09-02T13:47:09.862613635+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "monitoring",
+      "name": "prometheus-prometheus-kube-stack-kube-prometheus-tls-assets-0",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "6af1d1b5d6b6e6d3",
+      "timestamp": "2025-09-02T13:47:09.862627591+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "monitoring",
+      "name": "prometheus-prometheus-kube-stack-kube-prometheus-web-config",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "1d32a5e432677048",
+      "timestamp": "2025-09-02T13:47:09.892882941+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "monitoring",
+      "name": "prometheus-secret-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "03adf2e58b1e02ae",
+      "timestamp": "2025-09-02T13:47:09.892961827+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "nginx-test",
+      "name": "nginx-test-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "e6984602aee57559",
+      "timestamp": "2025-09-02T13:47:09.893483671+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "portainer",
+      "name": "portainer-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "5d9958c20bad981e",
+      "timestamp": "2025-09-02T13:47:09.893516207+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "renovate",
+      "name": "renovate-env",
+      "details": "Type: Opaque, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "5c130499713f4ff1",
+      "timestamp": "2025-09-02T13:47:09.893763205+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "bazarr-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "de78f4886221341c",
+      "timestamp": "2025-09-02T13:47:09.919910568+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "dnsadmin2-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "6d11d9efdb1f5e23",
+      "timestamp": "2025-09-02T13:47:09.924535844+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "hass-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "634215b44929f81e",
+      "timestamp": "2025-09-02T13:47:09.924585368+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "http-basicauth-secret",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "67a39ca8e20fc6c8",
+      "timestamp": "2025-09-02T13:47:09.92584111+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "jackett-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "50288c74c647eaa9",
+      "timestamp": "2025-09-02T13:47:09.925888124+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "jellyfin-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "e657992b3c1b8eb5",
+      "timestamp": "2025-09-02T13:47:09.949877773+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "kasm2-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "1ddb4117aba529ff",
+      "timestamp": "2025-09-02T13:47:09.950855843+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "lidarr-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "7a491c6ee2b7ca57",
+      "timestamp": "2025-09-02T13:47:09.952298731+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "nzb-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "2ea40f9b5a751dad",
+      "timestamp": "2025-09-02T13:47:09.9523258+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "nzbhydra2-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "2655e072909ca0d4",
+      "timestamp": "2025-09-02T13:47:09.980183957+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "ombi-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "1358429c9c6cc8ff",
+      "timestamp": "2025-09-02T13:47:09.981530818+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "overseerr-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "b3e50999aba1b85c",
+      "timestamp": "2025-09-02T13:47:09.98277139+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "plex-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "5a915256f15c01b8",
+      "timestamp": "2025-09-02T13:47:09.982904658+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "prowlarr-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "3817ef1cd9ff7bf2",
+      "timestamp": "2025-09-02T13:47:10.013581949+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "radarr-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "3e23c62b8691ba52",
+      "timestamp": "2025-09-02T13:47:10.015121253+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "radarrinternal-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "4c5e228df7f148f1",
+      "timestamp": "2025-09-02T13:47:10.01563218+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "s3-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "2ca47c115289ff72",
+      "timestamp": "2025-09-02T13:47:10.015721356+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "smokeping-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "5626df7edc3a587a",
+      "timestamp": "2025-09-02T13:47:10.029848747+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "sonarr-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "ca358d6f1dc6a9ed",
+      "timestamp": "2025-09-02T13:47:10.047166467+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "speed-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "ae127e2f7911fd6a",
+      "timestamp": "2025-09-02T13:47:10.048734372+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "tautulli-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "c9ac21e310149f4a",
+      "timestamp": "2025-09-02T13:47:10.049017943+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "transmission-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "88c88018ea66d02d",
+      "timestamp": "2025-09-02T13:47:10.073689319+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "reverse-proxy",
+      "name": "webserver-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "ef95e2fc58702625",
+      "timestamp": "2025-09-02T13:47:10.07427391+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "virtualmachines",
+      "name": "hello-from-pod.k8s-lan.alcatrash.net",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "a0ae252faf58f070",
+      "timestamp": "2025-09-02T13:47:10.075474233+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "website",
+      "name": "blogmichaeltrip-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "4beb7be32d713473",
+      "timestamp": "2025-09-02T13:47:10.076500927+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "website",
+      "name": "blogmichaeltripprd-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "8a901369024944e5",
+      "timestamp": "2025-09-02T13:47:10.088590873+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "website",
+      "name": "linuxbase-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "7aa7c0a1770f72b0",
+      "timestamp": "2025-09-02T13:47:10.104778295+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "website",
+      "name": "linuxbaseprd-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "461ee3634f1bb57d",
+      "timestamp": "2025-09-02T13:47:10.105740427+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "website",
+      "name": "michaeltripnl-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "1b9a9b0694e041cf",
+      "timestamp": "2025-09-02T13:47:10.106033428+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "website",
+      "name": "michaeltripnlprod-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "aecf2a9c1d04cc96",
+      "timestamp": "2025-09-02T13:47:10.119215156+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "website",
+      "name": "vanlichteschreden-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "9bf4d3cbd7492690",
+      "timestamp": "2025-09-02T13:47:10.135026964+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "whoogle",
+      "name": "whoogle-secret",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "24f25520da7a640d",
+      "timestamp": "2025-09-02T13:47:10.135058096+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "wikipedia",
+      "name": "wiki-en.k8s.alcatrash.net",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "5d612810846fa43e",
+      "timestamp": "2025-09-02T13:47:10.135588327+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "wikipedia",
+      "name": "wiki-nl.k8s.alcatrash.net",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "11ba61a4ca287a70",
+      "timestamp": "2025-09-02T13:47:10.136219506+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "wikipedia",
+      "name": "wikipedia.k8s.alcatrash.net",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "c6bde624a2bfe8f6",
+      "timestamp": "2025-09-02T13:47:10.167888637+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "wireguard",
+      "name": "wireguard-wg-generated",
+      "details": "Type: Opaque, Data keys: 1",
+      "isRead": true
+    },
+    {
+      "id": "fb6e5d84866d6ffa",
+      "timestamp": "2025-09-02T13:47:10.223045781+02:00",
+      "eventType": "ADDED",
+      "resourceType": "secrets",
+      "namespace": "wp-michaeltrip",
+      "name": "michaeltrip.k8s-lan.alcatrash.net-tls",
+      "details": "Type: kubernetes.io/tls, Data keys: 2",
+      "isRead": true
+    },
+    {
+      "id": "6a1c1acc059f2940",
+      "timestamp": "2025-09-02T13:47:27.982396789+02:00",
+      "eventType": "ADDED",
+      "resourceType": "deployments",
+      "namespace": "default",
+      "name": "nginx",
+      "details": "Replicas: 0/0, Available: 0",
+      "isRead": true
+    },
+    {
+      "id": "de4b95da127e22ab",
+      "timestamp": "2025-09-02T13:47:28.011181586+02:00",
+      "eventType": "MODIFIED",
+      "resourceType": "deployments",
+      "namespace": "default",
+      "name": "nginx",
+      "details": "Replicas: 0/0, Available: 0",
+      "isRead": false
+    },
+    {
+      "id": "9934ae511da7b422",
+      "timestamp": "2025-09-02T13:47:28.027712504+02:00",
+      "eventType": "MODIFIED",
+      "resourceType": "deployments",
+      "namespace": "default",
+      "name": "nginx",
+      "details": "Replicas: 0/0, Available: 0",
+      "isRead": false
+    },
+    {
+      "id": "83fb5ba6a9a215df",
+      "timestamp": "2025-09-02T13:47:28.028827293+02:00",
+      "eventType": "ADDED",
+      "resourceType": "pods",
+      "namespace": "default",
+      "name": "nginx-c95765fd4-f656w",
+      "details": "Phase: Pending, Ready: false",
+      "isRead": true
+    },
+    {
+      "id": "a3c19ca8fd463d5a",
+      "timestamp": "2025-09-02T13:47:28.02912746+02:00",
+      "eventType": "MODIFIED",
+      "resourceType": "pods",
+      "namespace": "default",
+      "name": "nginx-c95765fd4-f656w",
+      "details": "Phase: Pending, Ready: false",
+      "isRead": false
+    },
+    {
+      "id": "d44e11376593e527",
+      "timestamp": "2025-09-02T13:47:28.029241646+02:00",
+      "eventType": "ADDED",
+      "resourceType": "pods",
+      "namespace": "default",
+      "name": "nginx-c95765fd4-wmzdd",
+      "details": "Phase: Pending, Ready: false",
+      "isRead": true
+    },
+    {
+      "id": "d9f7381b1027baa1",
+      "timestamp": "2025-09-02T13:47:28.029979319+02:00",
+      "eventType": "MODIFIED",
+      "resourceType": "pods",
+      "namespace": "default",
+      "name": "nginx-c95765fd4-wmzdd",
+      "details": "Phase: Pending, Ready: false",
+      "isRead": false
+    },
+    {
+      "id": "060fa5423702ef93",
+      "timestamp": "2025-09-02T13:47:28.034830722+02:00",
+      "eventType": "MODIFIED",
+      "resourceType": "pods",
+      "namespace": "default",
+      "name": "nginx-c95765fd4-f656w",
+      "details": "Phase: Pending, Ready: false",
+      "isRead": false
+    },
+    {
+      "id": "6797d6993594e40f",
+      "timestamp": "2025-09-02T13:47:28.039567315+02:00",
+      "eventType": "MODIFIED",
+      "resourceType": "pods",
+      "namespace": "default",
+      "name": "nginx-c95765fd4-wmzdd",
+      "details": "Phase: Pending, Ready: false",
+      "isRead": false
+    },
+    {
+      "id": "4152c48525f788ca",
+      "timestamp": "2025-09-02T13:47:28.048351154+02:00",
+      "eventType": "MODIFIED",
+      "resourceType": "deployments",
+      "namespace": "default",
+      "name": "nginx",
+      "details": "Replicas: 0/2, Available: 0",
+      "isRead": false
+    },
+    {
+      "id": "fe340830264eb55d",
+      "timestamp": "2025-09-02T13:47:29.893361391+02:00",
+      "eventType": "MODIFIED",
+      "resourceType": "pods",
+      "namespace": "default",
+      "name": "nginx-c95765fd4-f656w",
+      "details": "Phase: Running, Ready: true",
+      "isRead": false
+    },
+    {
+      "id": "9b3788064a3034d8",
+      "timestamp": "2025-09-02T13:47:29.907133065+02:00",
+      "eventType": "MODIFIED",
+      "resourceType": "deployments",
+      "namespace": "default",
+      "name": "nginx",
+      "details": "Replicas: 1/2, Available: 1",
+      "isRead": false
+    },
+    {
+      "id": "e00b24f289d0b58e",
+      "timestamp": "2025-09-02T13:47:30.268413062+02:00",
+      "eventType": "MODIFIED",
+      "resourceType": "pods",
+      "namespace": "default",
+      "name": "nginx-c95765fd4-wmzdd",
+      "details": "Phase: Running, Ready: true",
+      "isRead": false
+    },
+    {
+      "id": "5786e06fe9ccac20",
+      "timestamp": "2025-09-02T13:47:30.28089282+02:00",
+      "eventType": "MODIFIED",
+      "resourceType": "deployments",
+      "namespace": "default",
+      "name": "nginx",
+      "details": "Replicas: 2/2, Available: 2",
+      "isRead": false
+    }
+  ]
+}
