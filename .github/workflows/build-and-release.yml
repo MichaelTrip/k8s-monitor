@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
         go-version: '1.21'
-    
+
     - name: Cache Go modules
       uses: actions/cache@v3
       with:
@@ -28,16 +28,16 @@ jobs:
         key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
         restore-keys: |
           ${{ runner.os }}-go-
-    
+
     - name: Download dependencies
       run: go mod download
-    
+
     - name: Run tests
       run: go test -v ./...
-    
+
     - name: Run go vet
       run: go vet ./...
-    
+
     - name: Build application
       run: go build -v ./cmd/main.go
 
@@ -48,27 +48,27 @@ jobs:
       contents: read
       packages: write
       id-token: write
-    
+
     outputs:
       image-digest: ${{ steps.build.outputs.digest }}
       image-url: ${{ steps.build.outputs.image-url }}
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
         fetch-depth: 0  # Fetch full history for semantic versioning
-    
+
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
-    
+
     - name: Log in to Container Registry
       uses: docker/login-action@v3
       with:
         registry: ${{ env.REGISTRY }}
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-    
+
     - name: Extract metadata (tags, labels) for Docker
       id: meta
       uses: docker/metadata-action@v5
@@ -79,7 +79,7 @@ jobs:
           type=ref,event=pr
           type=sha,prefix={{branch}}-
           type=raw,value=latest,enable={{is_default_branch}}
-    
+
     - name: Build and push Docker image
       id: build
       uses: docker/build-push-action@v5
@@ -101,33 +101,33 @@ jobs:
       packages: write
       issues: write
       pull-requests: write
-    
+
     outputs:
       new-release-published: ${{ steps.semantic.outputs.new-release-published }}
       new-release-version: ${{ steps.semantic.outputs.new-release-version }}
-    
+
     steps:
     - name: Checkout
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
         token: ${{ secrets.GITHUB_TOKEN }}
-    
+
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '20'
         cache: 'npm'
-    
+
     - name: Install dependencies
       run: npm ci
-    
+
     - name: Run semantic release
       id: semantic
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: npx semantic-release
-    
+
     - name: Log semantic release output
       run: |
         echo "New release published: ${{ steps.semantic.outputs.new-release-published }}"
@@ -140,7 +140,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-    
+
     steps:
     - name: Log in to Container Registry
       uses: docker/login-action@v3
@@ -148,25 +148,25 @@ jobs:
         registry: ${{ env.REGISTRY }}
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-    
+
     - name: Tag and push versioned image
       run: |
         VERSION=${{ needs.semantic-release.outputs.new-release-version }}
         SOURCE_IMAGE="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main"
         VERSIONED_IMAGE="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${VERSION}"
         VERSIONED_IMAGE_V="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:v${VERSION}"
-        
+
         # Pull the main branch image
         docker pull ${SOURCE_IMAGE}
-        
+
         # Tag with semantic version
         docker tag ${SOURCE_IMAGE} ${VERSIONED_IMAGE}
         docker tag ${SOURCE_IMAGE} ${VERSIONED_IMAGE_V}
-        
+
         # Push versioned tags
         docker push ${VERSIONED_IMAGE}
         docker push ${VERSIONED_IMAGE_V}
-        
+
         echo "Tagged and pushed:"
         echo "  - ${VERSIONED_IMAGE}"
         echo "  - ${VERSIONED_IMAGE_V}"
@@ -178,18 +178,18 @@ jobs:
       contents: read
       packages: read
       security-events: write
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-    
+
     - name: Run Trivy vulnerability scanner
       uses: aquasecurity/trivy-action@master
       with:
         image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
         format: 'sarif'
         output: 'trivy-results.sarif'
-    
+
     - name: Upload Trivy scan results to GitHub Security tab
       uses: github/codeql-action/upload-sarif@v3
       if: always()
