@@ -119,15 +119,14 @@ jobs:
         node-version: '20'
         cache: 'npm'
     
-    - name: Install semantic-release
-      run: |
-        npm install -g semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/github
+    - name: Install dependencies
+      run: npm ci
     
     - name: Run semantic release
       id: semantic
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: semantic-release
+      run: npx semantic-release
     
     - name: Log semantic release output
       run: |
@@ -181,6 +180,9 @@ jobs:
       security-events: write
     
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
     - name: Run Trivy vulnerability scanner
       uses: aquasecurity/trivy-action@master
       with:
@@ -189,7 +191,7 @@ jobs:
         output: 'trivy-results.sarif'
     
     - name: Upload Trivy scan results to GitHub Security tab
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       if: always()
       with:
         sarif_file: 'trivy-results.sarif'
