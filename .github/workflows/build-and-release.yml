@@ -133,12 +133,32 @@ jobs:
       id: semantic
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: npx semantic-release
+      run: |
+        npx semantic-release --dry-run=false > semantic-release.log 2>&1 || true
+        
+        # Check if a release was published by looking for success message
+        if grep -q "Published release" semantic-release.log; then
+          echo "new-release-published=true" >> $GITHUB_OUTPUT
+          # Extract version from the log
+          VERSION=$(grep -o "Published release [0-9]*\.[0-9]*\.[0-9]*" semantic-release.log | grep -o "[0-9]*\.[0-9]*\.[0-9]*" | head -1)
+          echo "new-release-version=$VERSION" >> $GITHUB_OUTPUT
+        else
+          echo "new-release-published=false" >> $GITHUB_OUTPUT
+          echo "new-release-version=" >> $GITHUB_OUTPUT
+        fi
+        
+        # Show the semantic-release log for debugging
+        cat semantic-release.log
 
     - name: Log semantic release output
       run: |
-        echo "New release published: ${{ steps.semantic.outputs.new-release-published }}"
-        echo "New release version: ${{ steps.semantic.outputs.new-release-version }}"
+        echo "New release published: ${{ steps.semantic.outputs.new-release-published || 'false' }}"
+        echo "New release version: ${{ steps.semantic.outputs.new-release-version || 'none' }}"
+        if [ "${{ steps.semantic.outputs.new-release-published }}" = "true" ]; then
+          echo "✅ Release ${{ steps.semantic.outputs.new-release-version }} was published successfully!"
+        else
+          echo "ℹ️  No new release was published (no qualifying commits or release conditions not met)"
+        fi
 
   release-docker-image:
     needs: [build-and-push, semantic-release]
