@@ -13,17 +13,17 @@ env:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v4
 
     - name: Set up Go
-
-    - name: Debug git log for commit dates
-      run: git log --pretty=format:"%h %ad %an" --date=iso
-
       uses: actions/setup-go@v4
       with:
         go-version: '1.21'
+
+    - name: Debug git log for commit dates
+      run: git log --pretty=format:"%h %ad %an" --date=iso
 
     - name: Cache Go modules
       uses: actions/cache@v3
