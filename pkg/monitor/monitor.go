@@ -8,39 +8,39 @@ import (
 	"sync"
 	"time"
 
-	v1 "k8s.io/api/core/v1"
 	appsv1 "k8s.io/api/apps/v1"
 	batchv1 "k8s.io/api/batch/v1"
 	batchv1beta1 "k8s.io/api/batch/v1beta1"
+	v1 "k8s.io/api/core/v1"
 	networkingv1 "k8s.io/api/networking/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/kubernetes"
-	
+
 	"k8s-monitor/pkg/config"
 	"k8s-monitor/pkg/utils"
 )
 
 type Change struct {
-	ID          string    `json:"id"`
-	Timestamp   time.Time `json:"timestamp"`
-	EventType   string    `json:"eventType"`
-	ResourceType string   `json:"resourceType"`
-	Namespace   string    `json:"namespace"`
-	Name        string    `json:"name"`
-	Details     string    `json:"details"`
-	IsRead      bool      `json:"isRead"`
+	ID           string    `json:"id"`
+	Timestamp    time.Time `json:"timestamp"`
+	EventType    string    `json:"eventType"`
+	ResourceType string    `json:"resourceType"`
+	Namespace    string    `json:"namespace"`
+	Name         string    `json:"name"`
+	Details      string    `json:"details"`
+	IsRead       bool      `json:"isRead"`
 }
 
 type K8sMonitor struct {
-	clientset       *kubernetes.Clientset
-	config          *config.Config
-	changes         []Change
-	changesMutex    sync.RWMutex
-	startTime       time.Time
-	stopChan        chan struct{}
-	knownResources  map[string]map[string]string // resourceType -> namespace/name -> resourceVersion
-	resourcesMutex  sync.RWMutex
+	clientset      *kubernetes.Clientset
+	config         *config.Config
+	changes        []Change
+	changesMutex   sync.RWMutex
+	startTime      time.Time
+	stopChan       chan struct{}
+	knownResources map[string]map[string]string // resourceType -> namespace/name -> resourceVersion
+	resourcesMutex sync.RWMutex
 }
 
 func NewK8sMonitor(clientset *kubernetes.Clientset, cfg *config.Config) (*K8sMonitor, error) {
@@ -79,14 +79,18 @@ func NewK8sMonitor(clientset *kubernetes.Clientset, cfg *config.Config) (*K8sMon
 					monitor.changes = append(monitor.changes, change)
 				}
 			}
-			log.Printf("Loaded %d changes from %s", len(monitor.changes), cfg.Persistence.FilePath)
+			if cfg.Logging.Enabled && cfg.Logging.LogOperations {
+				log.Printf("Loaded %d changes from %s", len(monitor.changes), cfg.Persistence.FilePath)
+			}
 		} else {
-			log.Printf("Could not load changes from file: %v", err)
+			if cfg.Logging.Enabled && cfg.Logging.LogOperations {
+				log.Printf("Could not load changes from file: %v", err)
+			}
 		}
 
 		// Populate known resources from loaded changes to avoid duplicate ADDED events
 		monitor.populateKnownResourcesFromChanges()
-		
+
 		// Create initial empty file if it doesn't exist
 		monitor.saveToFile()
 	}
@@ -96,7 +100,7 @@ func NewK8sMonitor(clientset *kubernetes.Clientset, cfg *config.Config) (*K8sMon
 
 func (m *K8sMonitor) StartMonitoring() error {
 	enabledResources := m.config.GetEnabledResources()
-	
+
 	// First, populate current state to avoid false ADDED events
 	if err := m.populateCurrentState(); err != nil {
 		log.Printf("Warning: Could not populate current state: %v", err)
@@ -117,7 +121,7 @@ func (m *K8sMonitor) StartMonitoring() error {
 
 func (m *K8sMonitor) startResourceWatcher(resource config.ResourceConfig) {
 	log.Printf("Starting watcher for %s (namespace: %s)", resource.Name, resource.Namespace)
-	
+
 	for {
 		var watcher watch.Interface
 		var err error
@@ -187,7 +191,7 @@ func (m *K8sMonitor) handleEvent(resourceType string, event watch.Event) {
 	}
 
 	var namespace, name, details, resourceVersion string
-	
+
 	switch obj := event.Object.(type) {
 	case *v1.Pod:
 		namespace = obj.Namespace
@@ -198,7 +202,7 @@ func (m *K8sMonitor) handleEvent(resourceType string, event watch.Event) {
 		namespace = obj.Namespace
 		name = obj.Name
 		resourceVersion = obj.ResourceVersion
-		details = fmt.Sprintf("Replicas: %d/%d, Available: %d", 
+		details = fmt.Sprintf("Replicas: %d/%d, Available: %d",
 			obj.Status.ReadyReplicas, obj.Status.Replicas, obj.Status.AvailableReplicas)
 	case *appsv1.ReplicaSet:
 		namespace = obj.Namespace
@@ -234,7 +238,7 @@ func (m *K8sMonitor) handleEvent(resourceType string, event watch.Event) {
 		namespace = obj.Namespace
 		name = obj.Name
 		resourceVersion = obj.ResourceVersion
-		details = fmt.Sprintf("Active: %d, Succeeded: %d, Failed: %d", 
+		details = fmt.Sprintf("Active: %d, Succeeded: %d, Failed: %d",
 			obj.Status.Active, obj.Status.Succeeded, obj.Status.Failed)
 	case *batchv1beta1.CronJob:
 		namespace = obj.Namespace
@@ -274,7 +278,7 @@ func (m *K8sMonitor) handleEvent(resourceType string, event watch.Event) {
 	}
 
 	resourceKey := fmt.Sprintf("%s/%s", namespace, name)
-	
+
 	// Check if this is a truly new resource or just a restart
 	m.resourcesMutex.Lock()
 	lastKnownVersion, existed := m.knownResources[resourceType][resourceKey]
@@ -283,7 +287,9 @@ func (m *K8sMonitor) handleEvent(resourceType string, event watch.Event) {
 
 	// Skip ADDED events for resources we already know about (from loaded state)
 	if string(event.Type) == "ADDED" && existed && lastKnownVersion != "" {
-		log.Printf("Skipping duplicate ADDED event for existing %s %s", resourceType, resourceKey)
+		if m.config.Logging.Enabled && m.config.Logging.LogChanges {
+			log.Printf("Skipping duplicate ADDED event for existing %s %s", resourceType, resourceKey)
+		}
 		return
 	}
 
@@ -306,8 +312,10 @@ func (m *K8sMonitor) handleEvent(resourceType string, event watch.Event) {
 	}
 	m.changesMutex.Unlock()
 
-	log.Printf("Change detected: %s %s/%s in %s", 
-		change.EventType, change.ResourceType, change.Name, change.Namespace)
+	if m.config.Logging.Enabled && m.config.Logging.LogChanges {
+		log.Printf("Change detected: %s %s/%s in %s",
+			change.EventType, change.ResourceType, change.Name, change.Namespace)
+	}
 
 	// Save to file immediately if persistence is enabled and not auto-saving
 	if m.config.Persistence.Enabled && !m.config.Persistence.AutoSave {
@@ -327,7 +335,7 @@ func (m *K8sMonitor) isPodReady(pod *v1.Pod) bool {
 func (m *K8sMonitor) GetChanges() []Change {
 	m.changesMutex.RLock()
 	defer m.changesMutex.RUnlock()
-	
+
 	// Return a copy to avoid race conditions
 	changes := make([]Change, len(m.changes))
 	copy(changes, m.changes)
@@ -337,10 +345,10 @@ func (m *K8sMonitor) GetChanges() []Change {
 func (m *K8sMonitor) GetStats() map[string]interface{} {
 	m.changesMutex.RLock()
 	defer m.changesMutex.RUnlock()
-	
+
 	unreadCount := 0
 	loadedFromFile := 0
-	
+
 	for _, change := range m.changes {
 		if !change.IsRead {
 			unreadCount++
@@ -350,7 +358,7 @@ func (m *K8sMonitor) GetStats() map[string]interface{} {
 			loadedFromFile++
 		}
 	}
-	
+
 	stats := map[string]interface{}{
 		"totalChanges":   len(m.changes),
 		"unreadChanges":  unreadCount,
@@ -359,26 +367,26 @@ func (m *K8sMonitor) GetStats() map[string]interface{} {
 		"startTime":      m.startTime,
 		"uptime":         time.Since(m.startTime).String(),
 	}
-	
+
 	// Count by event type
 	eventCounts := make(map[string]int)
 	resourceCounts := make(map[string]int)
-	
+
 	for _, change := range m.changes {
 		eventCounts[change.EventType]++
 		resourceCounts[change.ResourceType]++
 	}
-	
+
 	stats["eventCounts"] = eventCounts
 	stats["resourceCounts"] = resourceCounts
-	
+
 	return stats
 }
 
 func (m *K8sMonitor) MarkAllAsRead() int {
 	m.changesMutex.Lock()
 	defer m.changesMutex.Unlock()
-	
+
 	count := 0
 	for i := range m.changes {
 		if !m.changes[i].IsRead {
@@ -386,22 +394,24 @@ func (m *K8sMonitor) MarkAllAsRead() int {
 			count++
 		}
 	}
-	
-	log.Printf("Marked %d changes as read", count)
+
+	if m.config.Logging.Enabled && m.config.Logging.LogOperations {
+		log.Printf("Marked %d changes as read", count)
+	}
 	return count
 }
 
 func (m *K8sMonitor) MarkAsRead(changeID string) bool {
 	m.changesMutex.Lock()
 	defer m.changesMutex.Unlock()
-	
+
 	for i := range m.changes {
 		if m.changes[i].ID == changeID {
 			m.changes[i].IsRead = true
 			return true
 		}
 	}
-	
+
 	return false
 }
 
@@ -444,9 +454,13 @@ func (m *K8sMonitor) saveToFile() {
 	m.changesMutex.RUnlock()
 
 	if err := utils.SaveChangesToFile(m.config.Persistence.FilePath, changes); err != nil {
-		log.Printf("Error saving changes to file: %v", err)
+		if m.config.Logging.Enabled && m.config.Logging.LogOperations {
+			log.Printf("Error saving changes to file: %v", err)
+		}
 	} else {
-		log.Printf("Saved %d changes to %s", len(changes), m.config.Persistence.FilePath)
+		if m.config.Logging.Enabled && m.config.Logging.LogOperations {
+			log.Printf("Saved %d changes to %s", len(changes), m.config.Persistence.FilePath)
+		}
 	}
 }
 
@@ -461,11 +475,13 @@ func (m *K8sMonitor) SaveToFileNow() error {
 
 func (m *K8sMonitor) Stop() {
 	close(m.stopChan)
-	
+
 	// Save changes one last time before stopping
 	if m.config.Persistence.Enabled {
 		m.saveToFile()
-		log.Println("Final save completed")
+		if m.config.Logging.Enabled && m.config.Logging.LogOperations {
+			log.Println("Final save completed")
+		}
 	}
 }
 
@@ -496,7 +512,7 @@ func getTime(m map[string]interface{}, key string) time.Time {
 func (m *K8sMonitor) populateKnownResourcesFromChanges() {
 	m.resourcesMutex.Lock()
 	defer m.resourcesMutex.Unlock()
-	
+
 	// Track all resources that have been seen before from the loaded changes
 	for _, change := range m.changes {
 		resourceKey := fmt.Sprintf("%s/%s", change.Namespace, change.Name)
@@ -506,13 +522,13 @@ func (m *K8sMonitor) populateKnownResourcesFromChanges() {
 		// Mark as known (with empty version since we don't have it from saved data)
 		m.knownResources[change.ResourceType][resourceKey] = "loaded"
 	}
-	
+
 	log.Printf("Populated known resources from %d loaded changes", len(m.changes))
 }
 
 func (m *K8sMonitor) populateCurrentState() error {
 	enabledResources := m.config.GetEnabledResources()
-	
+
 	for _, resource := range enabledResources {
 		namespace := resource.Namespace
 		if namespace == "" {
@@ -532,10 +548,10 @@ func (m *K8sMonitor) populateCurrentState() error {
 			if err := m.populateServices(namespace); err != nil {
 				log.Printf("Error populating services: %v", err)
 			}
-		// Add other resource types as needed
+			// Add other resource types as needed
 		}
 	}
-	
+
 	return nil
 }
 
@@ -547,7 +563,7 @@ func (m *K8sMonitor) populatePods(namespace string) error {
 
 	m.resourcesMutex.Lock()
 	defer m.resourcesMutex.Unlock()
-	
+
 	for _, pod := range pods.Items {
 		resourceKey := fmt.Sprintf("%s/%s", pod.Namespace, pod.Name)
 		if m.knownResources["pods"] == nil {
@@ -555,7 +571,7 @@ func (m *K8sMonitor) populatePods(namespace string) error {
 		}
 		m.knownResources["pods"][resourceKey] = pod.ResourceVersion
 	}
-	
+
 	log.Printf("Populated %d existing pods", len(pods.Items))
 	return nil
 }
@@ -568,7 +584,7 @@ func (m *K8sMonitor) populateDeployments(namespace string) error {
 
 	m.resourcesMutex.Lock()
 	defer m.resourcesMutex.Unlock()
-	
+
 	for _, deployment := range deployments.Items {
 		resourceKey := fmt.Sprintf("%s/%s", deployment.Namespace, deployment.Name)
 		if m.knownResources["deployments"] == nil {
@@ -576,7 +592,7 @@ func (m *K8sMonitor) populateDeployments(namespace string) error {
 		}
 		m.knownResources["deployments"][resourceKey] = deployment.ResourceVersion
 	}
-	
+
 	log.Printf("Populated %d existing deployments", len(deployments.Items))
 	return nil
 }
@@ -589,7 +605,7 @@ func (m *K8sMonitor) populateServices(namespace string) error {
 
 	m.resourcesMutex.Lock()
 	defer m.resourcesMutex.Unlock()
-	
+
 	for _, service := range services.Items {
 		resourceKey := fmt.Sprintf("%s/%s", service.Namespace, service.Name)
 		if m.knownResources["services"] == nil {
@@ -597,7 +613,7 @@ func (m *K8sMonitor) populateServices(namespace string) error {
 		}
 		m.knownResources["services"][resourceKey] = service.ResourceVersion
 	}
-	
+
 	log.Printf("Populated %d existing services", len(services.Items))
 	return nil
 }

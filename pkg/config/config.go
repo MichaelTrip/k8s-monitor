@@ -14,16 +14,23 @@ type ResourceConfig struct {
 }
 
 type Config struct {
-	WebPort     int              `json:"webPort"`
-	Resources   []ResourceConfig `json:"resources"`
+	WebPort     int               `json:"webPort"`
+	Resources   []ResourceConfig  `json:"resources"`
 	Persistence PersistenceConfig `json:"persistence"`
+	Logging     LoggingConfig     `json:"logging"`
 }
 
 type PersistenceConfig struct {
-	Enabled    bool   `json:"enabled"`
-	FilePath   string `json:"filePath"`
-	AutoSave   bool   `json:"autoSave"`
-	SaveInterval int  `json:"saveInterval"` // in seconds
+	Enabled      bool   `json:"enabled"`
+	FilePath     string `json:"filePath"`
+	AutoSave     bool   `json:"autoSave"`
+	SaveInterval int    `json:"saveInterval"` // in seconds
+}
+
+type LoggingConfig struct {
+	Enabled       bool `json:"enabled"`
+	LogChanges    bool `json:"logChanges"`
+	LogOperations bool `json:"logOperations"`
 }
 
 func LoadConfig(configPath string) (*Config, error) {
@@ -35,6 +42,11 @@ func LoadConfig(configPath string) (*Config, error) {
 			FilePath:     "changes.json",
 			AutoSave:     true,
 			SaveInterval: 30, // Save every 30 seconds
+		},
+		Logging: LoggingConfig{
+			Enabled:       false, // Master switch for all logging
+			LogChanges:    false, // Log individual change events
+			LogOperations: false, // Log save/load operations
 		},
 		Resources: []ResourceConfig{
 			{Name: "pods", Enabled: true, Description: "Kubernetes Pods"},
@@ -61,7 +73,7 @@ func LoadConfig(configPath string) (*Config, error) {
 			return nil, fmt.Errorf("failed to create default config: %v", err)
 		}
 		fmt.Printf("Created default configuration file at %s\n", configPath)
-		
+
 		// Apply environment variable overrides to default config
 		applyEnvironmentOverrides(defaultConfig)
 		return defaultConfig, nil
@@ -91,7 +103,7 @@ func applyEnvironmentOverrides(config *Config) {
 		config.Persistence.FilePath = envFilePath
 		fmt.Printf("Using persistence file path from environment: %s\n", envFilePath)
 	}
-	
+
 	// Override web port if environment variable is set
 	if envWebPort := os.Getenv("WEB_PORT"); envWebPort != "" {
 		// Try to parse the port number

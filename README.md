@@ -67,6 +67,9 @@ The application uses a `config.json` file to configure which resources to monito
 - `persistence.filePath`: Path to the JSON file for saving changes
 - `persistence.autoSave`: Automatically save changes at regular intervals
 - `persistence.saveInterval`: Auto-save interval in seconds
+- `logging.enabled`: Master switch for all logging (default: false)
+- `logging.logChanges`: Log individual change events to stdout (default: false)
+- `logging.logOperations`: Log save/load operations to stdout (default: false)
 - `resources[].enabled`: Whether to monitor this resource type
 - `resources[].namespace`: Specific namespace to monitor (empty = all namespaces)
 
@@ -269,6 +272,17 @@ Edit the `config.json` file to customize which resources to monitor:
 ```json
 {
   "webPort": 8080,
+  "persistence": {
+    "enabled": true,
+    "filePath": "changes.json",
+    "autoSave": true,
+    "saveInterval": 30
+  },
+  "logging": {
+    "enabled": true,
+    "logChanges": true,
+    "logOperations": true
+  },
   "resources": [
     {
       "name": "pods",

@@ -6,6 +6,11 @@
     "autoSave": true,
     "saveInterval": 30
   },
+  "logging": {
+    "enabled": false,
+    "logChanges": false,
+    "logOperations": false
+  },
   "resources": [
     {
       "name": "pods",
