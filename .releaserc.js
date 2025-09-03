@@ -9,7 +9,7 @@ module.exports = {
       '@semantic-release/release-notes-generator',
       {
         preset: 'conventionalcommits',
-        releaseNotesGeneratorOpts: {
+        writerOpts: {
           transform: (commit) => {
             if (!commit.committerDate || isNaN(new Date(commit.committerDate).getTime())) {
               return null;
