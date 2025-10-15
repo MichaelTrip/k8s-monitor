@@ -1,79 +1,75 @@
-# Multi-stage build for Go application
-# Stage 1: Build stage
-FROM registry.access.redhat.com/ubi9/go-toolset:1.21 AS builder
+# Build stage
+FROM golang:1.21-alpine AS builder
+
+# Build arguments for version information
+ARG APP_VERSION=v1.0.0
+ARG BUILD_DATE=""
+ARG GIT_COMMIT=""
+
+# Install build dependencies
+RUN apk add --no-cache git make
 
 # Set working directory
-WORKDIR /workspace
+WORKDIR /app
 
-# Copy go mod files first for better caching
+# Copy go mod files
 COPY go.mod go.sum ./
-
-# Download dependencies
 RUN go mod download
 
 # Copy source code
 COPY . .
 
-# Build the application with static linking for better portability
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o k8s-monitor ./cmd/main.go
+# Build the application
+RUN BUILD_DATE_VALUE=${BUILD_DATE:-$(date -u +'%Y-%m-%dT%H:%M:%SZ')} && \
+    GIT_COMMIT_VALUE=${GIT_COMMIT:-unknown} && \
+    CGO_ENABLED=0 GOOS=linux go build \
+    -ldflags="-w -s -X main.Version=${APP_VERSION} -X main.BuildDate=${BUILD_DATE_VALUE} -X main.GitCommit=${GIT_COMMIT_VALUE}" \
+    -o k8s-monitor \
+    cmd/main.go
 
-# Stage 2: Runtime stage
-FROM registry.access.redhat.com/ubi9/ubi-minimal:latest
+# Final stage
+FROM alpine:latest
 
-# Install necessary packages for running the application
-RUN microdnf update -y && \
-    microdnf install -y ca-certificates && \
-    microdnf clean all
+# Set environment variables
+ENV PORT=8080
+ENV DEBUG=false
 
-# Create a non-root user (OpenShift best practice)
-RUN useradd -r -u 1001 -g 0 -s /sbin/nologin \
-    -c "k8s-monitor user" k8s-monitor
+# Install runtime dependencies
+RUN apk add --no-cache \
+    ca-certificates \
+    curl \
+    && rm -rf /var/cache/apk/*
 
-# Create directories with proper permissions
-RUN mkdir -p /app/data /home/k8s-monitor && \
-    chown -R 1001:0 /app /home/k8s-monitor && \
-    chmod -R g=u /app /home/k8s-monitor
+# Create non-root user
+RUN addgroup -g 1000 app && \
+    adduser -D -u 1000 -G app app
 
-# Set working directory
+# Create directories
+RUN mkdir -p /home/app/.kube /app/data && chown -R app:app /home/app
+
 WORKDIR /app
 
-# Copy the binary from builder stage
-COPY --from=builder /workspace/k8s-monitor .
+# Copy binary from builder
+COPY --from=builder /app/k8s-monitor .
+
+# Copy web assets
+COPY --from=builder /app/web ./web
 
 # Copy configuration files
-COPY --chown=1001:0 config.json .
+COPY --from=builder /app/config.json .
 
-# Ensure the binary is executable
-RUN chmod +x k8s-monitor
+# Change ownership
+RUN chown -R app:app /app && chown -R app:app /app/data
 
 # Switch to non-root user
-USER 1001
+USER app
 
-# Expose port (configurable via environment)
-EXPOSE 8080
+# Expose port
+EXPOSE ${PORT}
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:8080/health || exit 1
+    CMD curl -f http://localhost:${PORT}/health || exit 1
 
-# Set environment variables with defaults
-ENV WEB_PORT=8080
-ENV PERSISTENCE_FILE_PATH=/app/data/changes.json
-ENV HOME=/home/k8s-monitor
-
-# Define volume for persistent data
-VOLUME ["/app/data"]
-
-# Labels for better metadata (OpenShift best practice)
-LABEL name="k8s-monitor" \
-      vendor="k8s-monitor" \
-      version="1.0" \
-      summary="Kubernetes monitoring application" \
-      description="A Go application that monitors changes in Kubernetes API objects and displays them in a web interface. Supports environment variable configuration for WEB_PORT and PERSISTENCE_FILE_PATH." \
-      io.k8s.display-name="K8s Monitor" \
-      io.k8s.description="Kubernetes monitoring application with web interface" \
-      io.openshift.expose-services="8080:http" \
-      io.openshift.tags="monitoring,kubernetes,go"
-
-# Command to run the application
+# Run the application
 CMD ["./k8s-monitor"]

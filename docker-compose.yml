@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  k8s-monitor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP_VERSION: v1.0.0
+        BUILD_DATE: ${BUILD_DATE:-}
+        GIT_COMMIT: ${GIT_COMMIT:-unknown}
+    container_name: k8s-monitor
+    user: "${UID:-1000}:${GID:-1000}"
+    ports:
+      - "8080:8080"
+    volumes:
+      # Mount kubeconfig for Kubernetes access
+      - ~/.kube/config:/app/kubeconfig:ro
+      # Persistent data storage
+      - ./data:/app/data
+    environment:
+      - PORT=8080
+      - DEBUG=false
+      - KUBECONFIG=/app/kubeconfig
+      - PERSISTENCE_FILE_PATH=/app/data/changes.json
+    networks:
+      - k8s-monitor-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    depends_on: []
+    
+  # Optional: Add a reverse proxy for production-like setup
+  nginx:
+    image: nginx:alpine
+    container_name: k8s-monitor-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      # Uncomment for SSL certificates
+      # - ./certs:/etc/nginx/certs:ro
+    networks:
+      - k8s-monitor-network
+    depends_on:
+      - k8s-monitor
+    restart: unless-stopped
+    profiles:
+      - production
+
+networks:
+  k8s-monitor-network:
+    driver: bridge
+
+volumes:
+  k8s-monitor-data:
+    driver: local

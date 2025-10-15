@@ -1,11 +1,11 @@
 changes.json
 k8s-monitor
-
+data/
 # Node.js
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
+main
 # Semantic release
 CHANGELOG.md

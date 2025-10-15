@@ -1,0 +1,31 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: k8s-monitor
+  namespace: default
+  labels:
+    app: k8s-monitor
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    # Uncomment the following line to enable TLS with cert-manager
+    # cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: k8s-monitor.example.com  # Change this to your actual domain
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: k8s-monitor
+                port:
+                  number: 80
+  # Uncomment the following section to enable TLS
+  # tls:
+  #   - hosts:
+  #       - k8s-monitor.example.com
+  #     secretName: k8s-monitor-tls
