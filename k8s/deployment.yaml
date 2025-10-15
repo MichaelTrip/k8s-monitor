@@ -26,7 +26,7 @@ spec:
         fsGroup: 1000
       containers:
         - name: k8s-monitor
-          image: k8s-monitor:latest
+          image: ghcr.io/michaeltrip/k8s-monitor:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
